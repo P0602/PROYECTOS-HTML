@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="slider">
+        <form action="filtrar_despacho" method="GET" class="filtrar">
+            <div class="grupo_boton">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Estado del despacho</span>
+                  <input type="text" class="form-control" placeholder="Enviado" aria-label="estado del despacho" aria-describedby="" name="txt_numero">
+                </div>
+            </div>
+            <table class="listar_tabla">
+                <thead>
+                    <tr>
+                        <th>Numero</th>
+                        <th>Nombre</th>
+                        <th>direccion</th>
+                        <th>Telefono</th>
+                        <th>Producto</th>
+                        <th>Peso</th>
+                        <th>Medida</th>
+                        <th>Fecha ingreso</th>
+                        <th>Fecha envio</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if Despacho %}
+                    {% for desp in Despacho %}
+                    <tr>
+                        <td>{{ desp.numero_despacho}}</td>
+                        <td>{{ desp.nombre_cliente }}</td>
+                        <td>{{ desp.direccion }}</td>
+                        <td>{{ desp.celular }}</td>
+                        <td>{{ desp.productos }}</td> 
+                        <td>{{ desp.peso }}</td>
+                        <td>{{ desp.medidas }}</td>
+                        <td>{{ desp.fecha_ingreso }}</td>
+                        <td>{{ desp.fecha_envio }}</td>
+                        <td>{{ desp.estado }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    {% endif %}                
+                </tbody>
+            </table>   
+            <div class="boton"><button type="submit" class="btn btn-success" name="">Filtrar</button></div>
+        </form>
+    </div>
+
+{% endblock %}
+

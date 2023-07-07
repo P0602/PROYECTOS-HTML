@@ -1,0 +1,44 @@
+h1{
+	margin: 0; padding: 20px;
+	color: #000000;
+}
+
+.header{
+	background: #ee0000;
+	font-family: 'Dela Gothic One', cursive;
+}
+
+h2{
+	margin: 0; padding: 20px;
+	color: #070303;
+}
+
+.bienvenida{
+	background: #ad2727;
+	font-family: 'Dela Gothic One', cursive;
+}
+
+.Imagenes{
+	background: #07fd1c;
+	
+}
+
+h3{
+
+	font-family: 'Dela Gothic One', cursive;
+}
+
+h4{
+	margin: 0; padding: 20px;
+	background: #5b22f7;	
+}
+
+h5{
+	margin: 0; padding: 30px;
+	background: #88ff38;	
+}
+
+footer{
+	margin: 0; padding: 20px;
+	background: #5c4909;	
+}

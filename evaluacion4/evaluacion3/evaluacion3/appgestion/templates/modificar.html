@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="slider">
+  <form action="modificar_despacho" class="modificar">
+    <div class="grupo_boton">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Numero de despacho</span>
+        <input type="text" class="form-control" placeholder="01" aria-label="Numero de despacho" aria-describedby="" name="txt_numero">
+      </div>
+    </div>
+    <div class="grupo_boton">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Estado del despacho</span>
+        <input type="text" class="form-control" placeholder="Por Enviar" aria-label="Numero de despacho" aria-describedby="" name="txt_estado">
+      </div>
+    </div>
+    <div class="boton"><button type="submit" class="btn btn-warning" name="">Modificar</button></div>
+  </form>
+</div>
+
+{% endblock %}

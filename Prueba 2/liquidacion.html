@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>	
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Liquidacion Sueldos</title>	
+	<link rel="stylesheet" href="estilos.css">	
+	<link rel="stylesheet" href="flexboxgrid.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				
+					<script>
+						
+						 function calacular()
+					    {   
+							var AFP_desc = 0.13;
+							var Salud_desc = 0.07;  
+							var Bruto =  Sueldo + Bono;           
+							var des_afp = Bruto * AFP_desc;
+							var des_isa = Bruto * Salud_desc;
+							var Liquido = Bruto - des_afp - des_isa;
+						}
+                    
+    </script>	
+    
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+    $("#hide").click(function(){
+    $("form-check-input").hide();
+    });
+    $("#show").click(function(){
+    $("form-check-input").show();
+    });
+    });
+    </script>
+<body>
+
+ <form method="post" action="#"  name="formu" id="formu" onsubmit="return valida()">
+	<div class="sueldoUsuario">	
+		<header class="row">	
+			<div class="col-xs-25 col-sm-20 col-md-15 col-lg-14">	
+				<div class="header">				
+					<img src="CruzAmarillaLogo/cruzAmarilla.png" width="150" height="150">
+                    <h1><center>Aqui podra calcular el sueldo de sus empleados.</center></h1>
+				
+				   <div class="col-xs-8 col-sm-5 col-md-6 col-lg-4">
+						<label for="primer_y_segundo_nombre" class="form-label"> Primer y segundo nombre</label>
+						<input type="text" class="form-control" id="primer_y_segundo_nombre" required="[a-z]+">
+					</div><br>
+
+					<div class="col-xs-8 col-sm-5 col-md-6 col-lg-4">
+						<label for="Apellidos" class="form-label"> Apellidos</label>
+						<input type="text" class="form-control" id="Apellidos" required="">
+					</div><br>
+					
+					<div class="col-xs-5 col-sm-4 col-md-4 col-lg-3">
+						<label for="Run" class="form-label"> Run</label>
+						<input type="text" class="form-control" id="Run" required="[1-50]+">
+					</div><br>
+                
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3">
+						<label for="" class="form-label">Sexo(opcional)</label><br>
+					
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Masculino</label><br>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                        <label class="form-check-label" for="inlineRadio2">Femenino</label><br>
+							
+						<button id="hide">Ocultar</button>
+						<button id="show">Mostrar</button>
+
+						
+					</div>
+				</div><br>
+
+                <div class="col-xs-5 col-sm-6 col-md-4 col-lg-2">
+					  <label for="start">Fecha de nacimiento:</label>
+
+						<input type="date" id="start" name="trip-start"
+							value="2021-05-19"
+							min="1970-01-01" max="2030-12-31"><br>
+
+                        <label for="inputState4" class="form-label">Cargo</label>
+                        <select id="inputState4" class="form-select">
+                            <option selected>...</option>
+                            <option>Farmacéutico titular</option>
+                            <option>Farmacéutico regente</option>
+                            <option>Farmacéutico sustituto</option>
+                            <option>Farmacéutico adjunto</option>
+                            <option>gerente</option>
+                            <option>limpieza</option> 
+                        </select>
+                </div>     	
+					
+
+                <div class="col-xs-8 col-sm-5 col-md-6 col-lg-4">
+						<label for="sueldo" class="form-label">Sueldo Base</label>
+						<input type="text" class="form-control" id="sueldo" required>
+					</div><br>
+
+					<div class="col-xs-8 col-sm-5 col-md-6 col-lg-4">
+						<label for="Bono" class="form-label">Bono</label>
+						<input type="text" class="form-control" id="Bono" required>
+					</div><br>
+                </div> 
+
+                <div class="col-12">
+					  <button type="submit" class="btn btn-primary">Calcule el sueldo</button>
+					</div>
+ </form></right>
+			</div>
+		</header>
+	
+        </div>
+ 
+        <div class="sueldoLiquido"> 
+                    <div class="col-xs-27 colsm-20 col-md-15 col-lg-10">	
+
+                    	<h2><center>Aqui podra visualizar el sueldo de sus empleados.</center></h2>
+						<script>
+							function capturar(){
+
+								
+
+							var nombres = document.getElementById("primer_y_segundo_nombre").value;
+							var apellidos = document.getElementById("Apellidos").value;
+							var run = document.getElementById("Run").value;
+							var SexoM = document.getElementById("inlineRadio1").value;
+							var SexoF = document.getElementById("inlineRadio2").value;
+							var FechaNacimiento = document.getElementById("start").value;
+							var Cargo = document.getElementById("inputState04").value;
+							var FechaNacimiento = document.getElementById("start").value;
+							var Sueldo = document.getElementById("sueldo").value;
+							var Bono = document.getElementById("Bono").value;					 
+							var AFP_desc = 0.13;
+							var Salud_desc = 0.07;
+
+							document.formu.txa_comentario.value = "sueldo base:$" + Sueldo +
+							"bono por desempeño:$" + Bono + "Descuento afp:$" + des_afp + 
+							"Descuento isapre:$" + des_isa +
+							"sueldo liquido:$" + Liquido;
+							return true;										
+							
+							}
+						
+							
+
+						</script>
+						
+						<td>
+							<textarea name="txa_comentarios" id="txa_comentario" cols="30" rows="10"></textarea>
+						</td>
+					 
+						
+                    </div>               
+                </div> 
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>               	
+</body>
+</html>

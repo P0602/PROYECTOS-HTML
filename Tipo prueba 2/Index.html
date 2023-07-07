@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+    <link rel="stylesheet" href="estilos.css">	
+	  <link rel="stylesheet" href="flexboxgrid.min.css">
+       <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<!-- 900 uf = $26.593.650 CLP -->
+	<!-- 2000 uf = $59.097.000 CLP -->
+	<!-- 2600 uf = $76.826.100 CLP -->
+	<!-- 3400 uf = $100.464.900 CLP -->
+</head>
+
+
+<body>
+	<form action="#" name="formu" id="formu" onsubmit="return valida()">
+    <div class="ingresoDeDatos">	
+		<header class="row">	
+			<div class="col-xs-25 col-sm-20 col-md-15 col-lg-14">	
+				<div class="header">
+					<h1><center>Hola!!!<br> ingresa tus datos para comprar un departamento</center></h1>
+					
+				</div>
+			</div>
+		</header>
+	</div>
+   
+	<div class="col-xs-25col-sm-20 col-md-15 col-lg-9">	
+		<div class="registro">
+			<h1><center>Registra tus datos</center></h1>
+					
+					<div class="col-xs-6 col-sm-5 col-md-6 col-lg-4">
+						<label for="primer_y_segundo_nombre" class="form-label"> Primer y segundo nombre</label>
+						<input type="text" class="form-control" id="primer_y_segundo_nombre">
+					</div>
+
+					<div class="col-xs-6 col-sm-5 col-md-6 col-lg-4">
+						<label for="Apellidos" class="form-label"> Apellidos</label>
+						<input type="text" class="form-control" id="Apellidos">
+					</div>
+					
+					<div class="col-xs-3 col-sm-3 col-md-4 col-lg-2">
+						<label for="Run" class="form-label"> Run</label>
+						<input type="text" class="form-control" id="Run">
+					</div>
+
+					<div class="col-xs-4 col-sm-4 col-md-5 col-lg-3">
+						<label for="Teléfono" class="form-label"> Teléfono</label>
+						<input type="text" class="form-control" id="Teléfono">
+					</div>
+
+					<div class="col-xs-4 col-sm-4 col-md-5 col-lg-3">
+						<label for="correo" class="form-label">Correo elctronico</label>
+						<input type="text" class="form-control" id="correo">
+					</div>
+					
+					<div class="col-xs-5 col-sm-6 col-md-4 col-lg-2">
+					  <label for="inputState" class="form-label">Financiamiento</label>
+					  <select id="inputState" class="form-select">
+						<option selected>Seleccione...</option>
+						<option>Credito Hipotecario</option>
+						<option>contado</option>
+						<option>subsidio</option>
+					  </select>
+					</div>
+
+					<div class="col-xs-5 col-sm-6 col-md-4 col-lg-2">
+					  <label for="inputState02" class="form-label">Departamento</label>
+					  <select id="inputState02" class="form-select">
+						<option selected>Seleccione...</option>
+						<option>Tipo A</option>
+						<option>Tipo B</option>
+						<option>Tipo C</option>
+					  </select>
+					</div>
+
+					<div class="col-xs-5 col-sm-6 col-md-4 col-lg-2">
+					  <label for="inputState03" class="form-label">Selecciome el numero de estacionamientos que va a comprar</label>
+					  <select id="inputState03" class="form-select">
+						<option selected>...</option>
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+					  </select>
+					</div>
+					
+					<div class="col-xs-5 col-sm-6 col-md-4 col-lg-2">
+					  <label for="inputState04" class="form-label">Selecciome el tiempo del prestamo(interes)</label>
+					  <select id="inputState04" class="form-select">
+						<option selected>...</option>
+						<option>1 año</option>
+						<option>2 años</option>
+						<option>3 años</option>
+					  </select>
+					</div>
+
+					<div class="col-xs-4 col-sm-4 col-md-5 col-lg-3">
+						<label for="vafor_uf" class="form-label"> Valor uf</label>
+						<input type="text" class="form-control" id="vafor_uf">
+					</div>
+
+					<div class="col-xs-4 col-sm-4 col-md-5 col-lg-3">
+						<label for="taza_de_interes" class="form-label">taza de interes</label>
+						<input type="text" class="form-control" id="taza_de_interes">
+					</div>
+
+					<div class="col-12">
+					  <div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gridCheck">
+						<label class="form-check-label" for="gridCheck">
+						  Acepto los terminos y condiciones
+						</label>
+					  </div>
+					</div>
+					<div class="col-12">
+					  <button type="submit" class="btn btn-primary">Registra tus datos</button>
+					</div>
+				  </form></right>
+				  <p> </p>
+	
+			
+		
+	</div>
+<div class="col-xs-25 col-sm-20 col-md-15 col-lg-10">	
+				<div class="vistaPrevia">
+					<h1><center>vista previa de la voleta </center></h1>
+					<p><center>____________________________________________________________________________</center></p>
+					<h2><center>Compra del departamento</center></h2>
+					<script>
+					var Tipo_A = "Tipo A";
+					var Tipo_B = "Tipo B";
+					var Tipo_C = "Tipo C"; 
+					var uf_1 = 2000;
+					var uf_2 = 2600;
+					var uf_3 = 3400;
+					var uf_opcional = 900;
+					var capital = 0;
+					var interes = 0;
+
+					if(depaartamento = Tipo_A)
+					{
+						capital = capital + uf_1
+
+					}
+
+					if(depaartamento = Tipo_B)
+					{
+						capital = capital + uf_2
+
+					}
+
+					if(depaartamento = Tipo_C)
+					{
+						capital = capital + uf_3
+
+					}
+
+					if(estacionamiento = 1)
+					{
+						capital = capital + uf_opcional
+
+					}
+
+					if(estacionamiento = 2)
+					{
+						capital = capital + uf_opcional + uf_opcional
+
+					}
+
+					else:
+					{
+						capital + null
+					}
+
+					capital_pesos = capital * vafor_uf
+					tazaC = taza_de_interes / 100; 
+					interes = capital_pesos * tazaC * tiempo
+					totalC = capital_pesos + interes
+					</script>
+					<script>
+					function valida()
+					{
+						var nombres = document.getElementById("primer_y_segundo_nombre").value;
+						if (nombres.length<1)
+						{
+							alert("debe ingresar sus nombres");
+						}
+
+						var apellidos = document.getElementById("Apellidos").value;
+						if (apellidos.length<1)
+						{
+							alert("debe ingresar sus apellidos");
+						}
+
+						
+						var run = document.getElementById("Run").value;
+						if (run.length<1)
+						{
+							alert("debe ingresar su run");
+						}
+
+						var telefono = document.getElementById("Teléfono").value;
+						if (telefono.length<1)
+						{
+							alert("debe ingresar su teléfono");
+						}
+
+						var correo = document.getElementById("correo").value;
+						if (correo.length<1)
+						{
+							alert("debe ingresar su correo");
+						}
+
+							
+					}	
+				    </script>
+
+					<script>
+						var financiamiento = document.getElementById("inputState").value;
+						var depaartamento = document.getElementById("inputState02").value;
+						var estacionamiento = document.getElementById("inputState03").value;
+						var tiempo = document.getElementById("inputState04").value;
+						var vafor_uf = document.getElementById("vafor_uf").value;
+						var taza_de_interes = document.getElementById("taza_de_interes").value;
+					</script>
+				<script>
+					document.write("Nombre completo:");
+				</script>
+				<P></p>
+				<script>
+					document.write("Run:");
+				</script>
+				<P></p>
+				<script>
+					document.write("Telefono:");
+				</script>
+				
+				<P></p>
+				<script>
+					document.write("correo:");
+				</script>
+				<P></p>
+				<script>
+					document.write("Financiamiento:");
+				</script>
+				<P> </p>
+				<script>
+					document.write("tipo de departamento:");
+				</script>
+				<P> </p>
+				<P> </p>
+				<script>
+					document.write("Nro de estacionamiento/os:");
+				</script>
+				<P> </p>
+				<script>
+					document.write("tiempo del interes:");
+				</script>
+				<P> </p>
+				<script>
+					document.write("Valor depto en pesos:");
+				</script>
+				<P> </p>
+				<script>
+					document.write("Total de interes:");
+				</script>
+
+				<script>
+					document.write("Total de la Compra:" );
+				</script>
+				<P> </p>
+				<P> </p>
+				<script>
+					document.write("__________________________");
+				</script><br>
+				
+				<script>
+					document.write("Firma del cliente");
+				</script>
+				</div>
+			</div>
+			
+					
+					
+				
+				
+					
+					
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>               
+
+</body>
+</html>

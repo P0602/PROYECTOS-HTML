@@ -1,0 +1,30 @@
+body{
+	margin: 0%;
+	background-image: url(httpssistema.alalufcomnuevouploads24595_24600_1.jpg);
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+
+.ingresoDeDatos{
+	background: #15ff006c;
+	font-family: font-family 'Goblin One', cursive;
+	width: 89%;
+	padding:  20px;
+}
+
+.registro{
+	background: #3eff036b;
+	font-family: 'Dela Gothic One', cursive;
+	width: 120%;
+	padding:  20px;
+}
+
+.vistaPrevia{
+	background: #ffffff;
+	font-family: 'Newsreader', serif;
+	width: 120%;
+	padding:  20px;
+}

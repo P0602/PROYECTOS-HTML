@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="slider">
+    <div class="formulario">
+      <form action="registrar" method="GET" class="registrar">
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Numero de despacho</span>
+            <input type="text" class="form-control" placeholder="01" aria-label="Numero de despacho" aria-describedby="" name="txt_numero">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre de cliente</span>
+            <input type="text" class="form-control" placeholder="John Deere" aria-label="Nombre de cliente" aria-describedby="basic-addon1" name="txt_nombre">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Direccion</span>
+            <input type="text" class="form-control" placeholder="Calle falsa 123" aria-label="Username" aria-describedby="basic-addon1" name="txt_direccion">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Numero de celular</span>
+            <input type="text" class="form-control" placeholder="+56 " aria-label="Username" aria-describedby="basic-addon1" name="txt_telefono">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Productos</span>
+            <input type="text" class="form-control" placeholder="Frutos secos" aria-label="productos" aria-describedby="basic-addon1" name="txt_productos">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Peso</span>
+            <input type="text" class="form-control" placeholder="Kg" aria-label="peso" aria-describedby="basic-addon1" name="txt_peso">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Medidas</span>
+            <input type="text" class="form-control" placeholder="12x63x321cm" aria-label="medidas" aria-describedby="basic-addon1" name="txt_medidas">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Fecha de Ingreso</span>
+            <input type="text" class="form-control" placeholder="20/04/2021" aria-label="fecha-inrgeso" aria-describedby="basic-addon1" name="txt_fecha_ingreso">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Fecha de Envio</span>
+            <input type="text" class="form-control" placeholder="20/04/2021" aria-label="fecha_envio" aria-describedby="basic-addon1" name="txt_fecha_envio">
+          </div>
+        </div>
+        <div class="grupo_boton">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Estado del Despacho</span>
+            <input type="text" class="form-control" placeholder="por entregar" aria-label="estado" aria-describedby="basic-addon1" name="txt_estado">
+          </div>
+        </div>
+        <div class="boton"><button type="submit" class="btn btn-success" value="guardar" name="">Registrar</button></div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

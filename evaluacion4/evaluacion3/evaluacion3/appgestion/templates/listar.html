@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="slider">
+  <form action="listar_despacho" method="GET" class="listar">
+    <table class="listar_tabla">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>direccion</th>
+                <th>Telefono</th>
+                <th>Producto</th>
+                <th>Peso</th>
+                <th>Medida</th>
+                <th>Fecha ingreso</th>
+                <th>Fecha envio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if Despacho %}
+            {% for desp in Despacho %}
+            <tr>
+                <td>{{ desp.numero_despacho}}</td>
+                <td>{{ desp.nombre_cliente }}</td>
+                <td>{{ desp.direccion }}</td>
+                <td>{{ desp.celular }}</td>
+                <td>{{ desp.productos }}</td> 
+                <td>{{ desp.peso }}</td>
+                <td>{{ desp.medidas }}</td>
+                <td>{{ desp.fecha_ingreso }}</td>
+                <td>{{ desp.fecha_envio }}</td>
+                <td>{{ desp.estado }}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+             <h2>No existen registros de despachos...</h2>
+            {% endif %}                
+        </tbody>
+    </table>   
+    <button type="submit" class="btn btn-success" name="">Listar</button>
+  </form>
+</div>
+
+{% endblock %}
